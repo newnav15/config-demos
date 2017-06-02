@@ -1,0 +1,13 @@
+service:
+ message: Hello World naveen is here .......
+
+spring:
+  cloud:
+    config: 
+      uri : http://localhost:9001
+  application:
+    name: config-client
+    
+server:
+  port: 9002
+  
