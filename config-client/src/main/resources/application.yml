@@ -12,7 +12,7 @@ spring:
   rabbitmq:
     username: test
     password: test
-    host: 192.168.169.252
+    host: 192.168.0.104
     
 server:
   port: 9002
