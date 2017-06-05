@@ -3,4 +3,4 @@ spring:
   config: 
    server: 
     git: 
-     uri: http://localhost:9001
+     uri: http://quickstart.cloudera:8888
