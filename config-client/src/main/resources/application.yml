@@ -16,4 +16,8 @@ spring:
     
 server:
   port: 9002
+
+management:
+  security:
+    enabled: false
   
