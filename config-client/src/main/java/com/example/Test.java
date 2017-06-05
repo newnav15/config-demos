@@ -1,6 +1,7 @@
 package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -19,6 +20,9 @@ import com.art.platform.config.ServiceConfiguration;
 @RestController
 @RefreshScope
 public class Test {
+	
+	@Value("#{service.message1}")
+	private String message1;
 
     private final Service service;
 
@@ -30,6 +34,7 @@ public class Test {
     @GetMapping("/")
     public String home() {
     	System.out.println("..............................................."+service.message());
+    	System.out.println(".......................message1........................"+message1);
         return service.message();
     }
 
