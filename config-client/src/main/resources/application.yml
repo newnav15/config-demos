@@ -1,5 +1,5 @@
 service:
- message: Hello World naveen is here .......
+
 
 spring:
   cloud:
