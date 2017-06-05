@@ -3,6 +3,7 @@ package com.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Import;
@@ -19,9 +20,10 @@ import com.art.platform.config.ServiceConfiguration;
 @Import(ServiceConfiguration.class)
 @RestController
 @RefreshScope
+@EnableAutoConfiguration
 public class Test {
 	
-	@Value("#{service.message1}")
+	@Value("${service.message1}")
 	private String message1;
 
     private final Service service;
