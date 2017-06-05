@@ -1,20 +1,6 @@
 spring:
-  cloud:
-    config: 
-      uri : http://localhost:9001
-    bus:
-      enabled: true
-  application:
-    name: config-client
-  rabbitmq:
-    username: test
-    password: test
-    host: 192.168.169.252
-    
-server:
-  port: 9002
-
-management:
-  security:
-    enabled: false
-  
+ cloud: 
+  config: 
+   server: 
+    git: 
+     uri: http://localhost:9001

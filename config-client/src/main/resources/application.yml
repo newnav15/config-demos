@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  application:
+    name: config-client
+  rabbitmq:
+    username: test
+    password: test
+    host: 192.168.169.252
+    
+server:
+  port: 9002
+
+management:
+  security:
+    enabled: false
+  
+     
